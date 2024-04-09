@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .grid_container {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            height: 100vh;
+            gap: 10px;
+
+            background-color: rgb(51, 56, 56);
+        }
+
+        .one,
+        .two,
+        .three,
+        .four,
+        .five,
+        .six,
+        .seven {
+            border: 1px solid;
+
+            backdrop-filter: blur(5px);
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            border-width: 3px;
+            border-style: solid;
+            border-color: rgb(233, 236, 239);
+            border-image: initial;
+
+            padding-left: 10px;
+            padding-right: 10px;
+
+            justify-content: flex-end;
+        }
+
+
+        .one {
+            grid-row: span 3;
+        }
+
+        .two {
+            grid-column: span 2;
+        }
+
+        .three {
+            grid-column: span 1;
+        }
+
+        .four {
+            grid-column: span 1;
+        }
+
+        .five {
+            grid-column: span 2;
+            grid-row: span 2;
+            /* grid-column-start: 2;
+            grid-column-end:  -1;
+            grid-row-start: 2;
+            grid-row-end: 4; */
+
+            /* grid-area:  2 / 2 / 4 / -1 ; */
+        }
+
+        .six {
+            grid-column: span 4;
+            order: 1;
+        }
+                .six {
+            grid-column: span 4;
+            order: 1;
+        }
+
+
+        @media screen and (width < 900px) {
+            .one {
+                /* grid-row: span 3; */
+                display: none;
+            }
+
+            .two {
+                grid-column: span 4;
+            }
+
+            .three {
+                grid-column: span 4;
+            }
+
+            .four {
+                grid-column: span 4;
+            }
+
+            .five {
+                grid-column: span 4;
+                /* grid-row: span 2; */
+                /* grid-column-start: 2;
+            grid-column-end:  -1;
+            grid-row-start: 2;
+            grid-row-end: 4; */
+
+                /* grid-area:  2 / 2 / 4 / -1 ; */
+            }
+
+            .six {
+                grid-column: span 4;
+                /* order: 1; */
+            }
+
+            .seven {
+                grid-column: span 4;
+                /* order: 1; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid_container">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+        <div class="seven"></div>
+    </div>
+</body>
+
+</html>
